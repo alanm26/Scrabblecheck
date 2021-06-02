@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<title>Scrabble</title>
+<meta name="keywords" content="Scrabble" />
+<meta name="description" content="This checks the scrabble." />
+<script>
+function CheckName(){
+	inputname = document.getElementById("box").value;
+	inputnamelc = inputname.toLowerCase();
+	G11PResults = "";
+	G12PResults = "";
+	G13PResults = "";
+	G21PResults = "";
+	G22PResults = "";
+	G23PResults = "";
+	G31PResults = "";
+	G32PResults = "";
+	G33PResults = "";
+	G33POResults = "";
+	var containsA = 0;
+	var containsB = 0;
+	var containsC = 0;
+	var containsD = 0;
+	var containsE = 0;
+	var containsF = 0;
+	var containsG = 0;
+	var containsH = 0;
+	var containsI = 0;
+	var containsJ = 0;
+	var containsK = 0;
+	var containsL = 0;
+	var containsM = 0;
+	var containsN = 0;
+	var containsO = 0;
+	var containsP = 0;
+	var containsQ = 0;
+	var containsR = 0;
+	var containsS = 0;
+	var containsT = 0;
+	var containsU = 0;
+	var containsV = 0;
+	var containsW = 0;
+	var containsX = 0;
+	var containsY = 0;
+	var containsZ = 0;
+	var includesCat = inputnamelc.includes("cat");
+	var includesDog = inputnamelc.includes("dog");
+	var includesElk = inputnamelc.includes("elk");
+	var includesFox = inputnamelc.includes("fox");
+	var includesKit = inputnamelc.includes("kit");
+	var includesRam = inputnamelc.includes("ram");
+	var includesPig = inputnamelc.includes("pig");
+	var includesPup = inputnamelc.includes("pup");
+	var includesBear = inputnamelc.includes("bear");
+	var includesColt = inputnamelc.includes("colt");
+	var includesDeer = inputnamelc.includes("deer");
+	var includesFawn = inputnamelc.includes("fawn");
+	var includesGoat = inputnamelc.includes("goat");
+	var includesLamb = inputnamelc.includes("lamb");
+	var includesOrca = inputnamelc.includes("orca");
+	var includesWolf = inputnamelc.includes("wolf");
+	var includesBison = inputnamelc.includes("bison");
+	var includesCamel = inputnamelc.includes("camel");
+	var includesDingo = inputnamelc.includes("dingo");
+	var includesHorse = inputnamelc.includes("horse");
+	var includesHyena = inputnamelc.includes("hyena");
+	var includesMouse = inputnamelc.includes("mouse");
+	var includesPanda = inputnamelc.includes("panda");
+	var includesTiger = inputnamelc.includes("tiger");
+	var includesBeer = inputnamelc.includes("beer");
+	var includesCorn = inputnamelc.includes("corn");
+	var includesDate = inputnamelc.includes("date");
+	var includesJava = inputnamelc.includes("java");
+	var includesLime = inputnamelc.includes("lime");
+	var includesMilk = inputnamelc.includes("milk");
+	var includesPeas = inputnamelc.includes("peas");
+	var includesSoda = inputnamelc.includes("soda");
+	var includesApple = inputnamelc.includes("apple");
+	var includesBread = inputnamelc.includes("bread");
+	var includesLemon = inputnamelc.includes("lemon");
+	var includesMocha = inputnamelc.includes("mocha");
+	var includesOlive = inputnamelc.includes("olive");
+	var includesSushi = inputnamelc.includes("sushi");
+	var includesVodka = inputnamelc.includes("vodka");
+	var includesWater = inputnamelc.includes("water");
+	var includesGarlic = inputnamelc.includes("garlic");
+	var includesHotdog = inputnamelc.includes("hotdog");
+	var includesLettuce = inputnamelc.includes("lettuce");
+	var includesOrange = inputnamelc.includes("orange");
+	var includesPickle = inputnamelc.includes("pickle");
+	var includesQuinoa = inputnamelc.includes("quinoa");
+	var includesSorbet = inputnamelc.includes("sorbet");
+	var includesWalnut = inputnamelc.includes("walnut");
+	var includesShield = inputnamelc.includes("shield");
+	var includesHammer = inputnamelc.includes("hammer");
+	var includesRapier = inputnamelc.includes("rapier");
+	var includesPistol = inputnamelc.includes("pistol");
+	var includesChakram = inputnamelc.includes("chakram");
+	var includesHalberd = inputnamelc.includes("halberd");
+	var includesNodachi = inputnamelc.includes("nodachi");
+	var includesShotgun = inputnamelc.includes("shotgun");
+	var includesScimitar = inputnamelc.includes("scimitar");
+	var includesNaginata = inputnamelc.includes("naginata");
+	var includesNunchaku = inputnamelc.includes("nunchaku");
+	var includesCrossbow = inputnamelc.includes("crossbow");
+	var includesMasamune = inputnamelc.includes("masamune");
+	var includesShuriken = inputnamelc.includes("shuriken");
+	var includesBazooka = inputnamelc.includes("bazooka");
+	var includesGreataxe = inputnamelc.includes("greataxe");
+	var includesJavelin = inputnamelc.includes("javelin");
+	var includesRevolver = inputnamelc.includes("revolver");
+	for (var i = 0; i < inputname.length; i++){
+		if ((inputnamelc.charAt(i)) == "a") {
+			containsA++;
+		} else if ((inputnamelc.charAt(i)) == "b") {
+			containsB++;
+		} else if ((inputnamelc.charAt(i)) == "c") {
+			containsC++;
+		} else if ((inputnamelc.charAt(i)) == "d") {
+			containsD++;
+		} else if ((inputnamelc.charAt(i)) == "e") {
+			containsE++;
+		} else if ((inputnamelc.charAt(i)) == "f") {
+			containsF++;
+		} else if ((inputnamelc.charAt(i)) == "g") {
+			containsG++;
+		} else if ((inputnamelc.charAt(i)) == "h") {
+			containsH++;
+		} else if ((inputnamelc.charAt(i)) == "i") {
+			containsI++;
+		} else if ((inputnamelc.charAt(i)) == "j") {
+			containsJ++;
+		} else if ((inputnamelc.charAt(i)) == "k") {
+			containsK++;
+		} else if ((inputnamelc.charAt(i)) == "l") {
+			containsL++;
+		} else if ((inputnamelc.charAt(i)) == "m") {
+			containsM++;
+		} else if ((inputnamelc.charAt(i)) == "n") {
+			containsN++;
+		} else if ((inputnamelc.charAt(i)) == "o") {
+				containsO++;
+		} else if ((inputnamelc.charAt(i)) == "p") {
+			containsP++;
+		} else if ((inputnamelc.charAt(i)) == "q") {
+			containsQ++;
+		} else if ((inputnamelc.charAt(i)) == "r") {
+			containsR++;
+		} else if ((inputnamelc.charAt(i)) == "s") {
+			containsS++;
+		} else if ((inputnamelc.charAt(i)) == "t") {
+			containsT++;
+		} else if ((inputnamelc.charAt(i)) == "u") {
+			containsU++;
+		} else if ((inputnamelc.charAt(i)) == "v") {
+			containsV++;
+		} else if ((inputnamelc.charAt(i)) == "w") {
+			containsW++;
+		} else if ((inputnamelc.charAt(i)) == "x") {
+			containsX++;
+		} else if ((inputnamelc.charAt(i)) == "y") {
+			containsY++;
+		} else if ((inputnamelc.charAt(i)) == "z") {
+			containsZ++;
+		}
+	}
+//Group 1
+	if (containsA >=1 && containsC >=1 && containsT >=1 && includesCat == false){
+		G11PResults += "cat ";
+	}
+	if (containsD >=1 && containsG >=1 && containsO >=1 && includesDog == false){
+		G11PResults += "dog ";
+	}
+	if (containsE >=1 && containsK >=1 && containsL >=1 && includesElk == false){
+		G11PResults += "elk ";
+	}
+	if (containsF >=1 && containsO >=1 && containsX >=1 && includesFox == false){
+		G11PResults += "fox ";
+	}
+	if (containsI >=1 && containsK >=1 && containsT >=1 && includesKit == false){
+		G11PResults += "kit ";
+	}
+	if (containsA >=1 && containsM >=1 && containsR >=1 && includesRam == false){
+		G11PResults += "ram ";
+	}
+	if (containsG >=1 && containsI >=1 && containsP >=1 && includesPig == false){
+		G11PResults += "pig ";
+	}
+	if (containsP >=2 && containsU >=1 && includesPup == false){
+		G11PResults += "pup ";
+	}
+	if (containsA >=1 && containsB >=1 && containsE >=1 && containsR >=1 && includesBear == false){
+		G12PResults += "bear ";
+	}
+	if (containsC >=1 && containsL >=1 && containsO >=1 && containsT >=1 && includesColt == false){
+		G12PResults += "colt ";
+	}
+	if (containsD >=1 && containsE >=2 && containsR >=1 && includesDeer == false){
+		G12PResults += "deer ";
+	}
+	if (containsA >=1 && containsF >=1 && containsN >=1 && containsW >=1 && includesFawn == false){
+		G12PResults += "fawn ";
+	}
+	if (containsA >=1 && containsG >=1 && containsO >=1 && containsT >=1 && includesGoat == false){
+		G12PResults += "goat ";
+	}
+	if (containsA >=1 && containsB >=1 && containsL >=1 && containsM >=1 && includesLamb == false){
+		G12PResults += "lamb ";
+	}
+	if (containsA >=1 && containsC >=1 && containsO >=1 && containsR >=1 && includesOrca == false){
+		G12PResults += "orca ";
+	}
+	if (containsF >=1 && containsL >=1 && containsO >=1 && containsW >=1 && includesWolf == false){
+		G12PResults += "wolf ";
+	}
+	if (containsB >=1 && containsI >=1 && containsN >=1 && containsO >=1 && containsS >=1 && includesBison == false){
+		G13PResults += "bison ";
+	}
+	if (containsA >=1 && containsC >=1 && containsE >=1 && containsL >=1 && containsM >=1 && includesCamel == false){
+		G13PResults += "camel ";
+	}
+	if (containsD >=1 && containsG >=1 && containsI >=1 && containsN >=1 && containsO >=1 && includesDingo == false){
+		G13PResults += "dingo ";
+	}
+	if (containsE >=1 && containsH >=1 && containsO >=1 && containsR >=1 && containsS >=1 && includesHorse == false){
+		G13PResults += "horse ";
+	}
+	if (containsA >=1 && containsE >=1 && containsH >=1 && containsN >=1 && containsY >=1 && includesHyena == false){
+		G13PResults += "hyena ";
+	}
+	if (containsE >=1 && containsM >=1 && containsO >=1 && containsS >=1 && containsU >=1 && includesMouse == false){
+		G13PResults += "mouse ";
+	}
+	if (containsA >=2 && containsD >=1 && containsN >=1 && containsP >=1 && includesPanda == false){
+		G13PResults += "panda ";
+	}
+	if (containsE >=1 && containsG >=1 && containsI >=1 && containsR >=1 && containsT >=1 && includesTiger == false){
+		G13PResults += "tiger ";
+	}
+//Group 2
+	if (containsB >=1 && containsE >=2 && containsR >=1 && includesBeer == false){
+		G21PResults += "beer ";
+	}
+	if (containsC >=1 && containsN >=1 && containsO >=1 && containsR >=1 && includesCorn == false){
+		G21PResults += "corn ";
+	}
+	if (containsA >=1 && containsD >=1 && containsE >=1 && containsT >=1 && includesDate == false){
+		G21PResults += "date ";
+	}
+	if (containsA >=2 && containsJ >=1 && containsV >=1 && includesJava == false){
+		G21PResults += "java ";
+	}
+	if (containsE >=1 && containsI >=1 && containsL >=1 && containsM >=1 && includesLime == false){
+		G21PResults += "lime ";
+	}
+	if (containsI >=1 && containsK >=1 && containsL >=1 && containsM >=1 && includesMilk == false){
+		G21PResults += "milk ";
+	}
+	if (containsA >=1 && containsE >=1 && containsP >=1 && containsS >=1 && includesPeas == false){
+		G21PResults += "peas ";
+	}
+	if (containsA >=1 && containsD >=1 && containsO >=1 && containsS >=1 && includesSoda == false){
+		G21PResults += "soda ";
+	}
+	if (containsA >=1 && containsE >=1 && containsL >=1 && containsP >=2 && includesApple == false){
+		G22PResults += "apple ";
+	}
+	if (containsA >=1 && containsB >=1 && containsD >=1 && containsE >=1 && containsR >=1 && includesBread == false){
+		G22PResults += "bread ";
+	}
+	if (containsE >=1 && containsL >=1 && containsM >=1 && containsN >=1 && containsO >=1 && includesLemon == false){
+		G22PResults += "lemon ";
+	}
+	if (containsA >=1 && containsC >=1 && containsH >=1 && containsM >=1 && containsO >=1 && includesMocha == false){
+		G22PResults += "mocha ";
+	}
+	if (containsE >=1 && containsI >=1 && containsL >=1 && containsO >=1 && containsV >=1 && includesOlive == false){
+		G22PResults += "olive ";
+	}
+	if (containsH >=1 && containsI >=1 && containsS >=2 && containsU >=1 && includesSushi == false){
+		G22PResults += "sushi ";
+	}
+	if (containsA >=1 && containsD >=1 && containsK >=1 && containsO >=1 && containsV >=1 && includesVodka == false){
+		G22PResults += "vodka ";
+	}
+	if (containsA >=1 && containsE >=1 && containsR >=1 && containsT >=1 && containsW >=1 && includesWater == false){
+		G22PResults += "water ";
+	}
+	if (containsA >=1 && containsC >=1 && containsG >=1 && containsI >=1 && containsL >=1 && containsR >=1 && includesGarlic == false){
+		G23PResults += "garlic ";
+	}
+	if (containsD >=1 && containsG >=1 && containsH >=1 && containsO >=2 && containsT >=1 && includesHotdog == false){
+		G23PResults += "hotdog ";
+	}
+	if (containsC >=1 && containsE >=2 && containsL >=1 && containsT >=2 && containsU >=1 && includesLettuce == false){
+		G23PResults += "lettuce ";
+	}
+	if (containsA >=1 && containsE >=1 && containsG >=1 && containsN >=1 && containsO >=1 && containsR >=1 && includesOrange == false){
+		G23PResults += "orange ";
+	}
+	if (containsC >=1 && containsE >=1 && containsI >=1 && containsK >=1 && containsL >=1 && containsP >=1 && includesPickle == false){
+		G23PResults += "pickle ";
+	}
+	if (containsA >=1 && containsI >=1 && containsN >=1 && containsO >=1 && containsQ >=1 && containsU >=1 && includesQuinoa == false){
+		G23PResults += "quinoa ";
+	}
+	if (containsB >=1 && containsE >=1 && containsO >=1 && containsR >=1 && containsS >=1 && containsT >=1 && includesSorbet == false){
+		G23PResults += "sorbet ";
+	}
+	if (containsA >=1 && containsL >=1 && containsN >=1 && containsT >=1 && containsU >=1 && containsW >=1 && includesWalnut == false){
+		G23PResults += "walnut ";
+	}
+//Group 3
+	if (containsD >=1 && containsE >=1 && containsH >=1 && containsI >=1  && containsL >=1 && containsS >=1 && includesShield == false){
+		G31PResults += "shield ";
+	}
+	if (containsA >=1 && containsE >=1 && containsH >=1 && containsM >=2  && containsR >=1 && includesHammer == false){
+		G31PResults += "hammer ";
+	}
+	if (containsA >=1 && containsE >=1 && containsI >=1 && containsP >=1  && containsR >=2 && includesRapier == false){
+		G31PResults += "rapier ";
+	}
+	if (containsI >=1 && containsL >=1 && containsO >=1 && containsP >=1  && containsS >=1 && containsT >=1 && includesPistol == false){
+		G31PResults += "pistol ";
+	}
+	if (containsA >=2 && containsC >=1 && containsH >=1 && containsK >=1  && containsM >=1 && containsR >=1 && includesChakram == false){
+		G32PResults += "chakram ";
+	}
+	if (containsA >=1 && containsB >=1 && containsD >=1 && containsE >=1  && containsH >=1 && containsL >=1 && containsR >=1 && includesHalberd == false){
+		G32PResults += "halberd ";
+	}
+	if (containsA >=1 && containsC >=1 && containsD >=1 && containsH >=1  && containsI >=1 && containsN >=1 && containsO >=1 && includesNodachi == false){
+		G32PResults += "nodachi ";
+	}
+	if (containsG >=1 && containsH >=1 && containsN >=1 && containsO >=1  && containsS >=1 && containsT >=1 && containsU >=1 && includesShotgun == false){
+		G32PResults += "shotgun ";
+	}	
+	if (containsA >=1 && containsC >=1 && containsI >=2 && containsM >=1  && containsR >=1 && containsS >=1 && containsT >=1 && includesScimitar == false){
+		G33PResults += "scimitar ";
+	}
+	if (containsA >=3 && containsG >=1 && containsI >=1 && containsN >=2  && containsT >=1 && includesNaginata == false){
+		G33PResults += "naginata ";
+	}
+	if (containsA >=1 && containsC >=1 && containsH >=1 && containsK >=1  && containsN >=2 && containsU >=2 && includesNunchaku == false){
+		G33PResults += "nunchaku ";
+	}
+	if (containsB >=1 && containsC >=1 && containsO >=2 && containsR >=1  && containsS >=2 && containsW >=1 && includesCrossbow == false){
+		G33PResults += "crossbow ";
+	}
+	if (containsA >=2 && containsE >=1 && containsM >=2 && containsN >=1  && containsS >=1 && containsU >=1 && includesMasamune == false){
+		G33PResults += "masamune ";
+	}
+	if (containsE >=1 && containsH >=1 && containsI >=1 && containsK >=1  && containsN >=1 && containsR >=1 && containsS >=1 && containsU >=1 && includesShuriken == false){
+		G33PResults += "shuriken ";
+	}	
+	if (containsA >=2 && containsB >=1 && containsK >=1 && containsO >=2  && containsZ >=1 && includesBazooka == false){
+		G33POResults += "bazooka ";
+	}	
+	if (containsA >=2 && containsE >=2 && containsG >=1 && containsR >=1  && containsT >=1 && containsX >=1 && includesGreataxe == false){
+		G33POResults += "greataxe ";
+	}	
+	if (containsA >=1 && containsE >=1 && containsI >=1 && containsJ >=1  && containsL >=1 && containsN >=1 && containsV >=1 && includesJavelin == false){
+		G33POResults += "javelin ";
+	}	
+	if (containsE >=2 && containsL >=1 && containsO >=1 && containsR >=2  && containsV >=2 && includesRevolver == false){
+		G33POResults += "revolver ";
+	}	
+	document.getElementById("NameChecked").innerHTML =inputname;
+	document.getElementById("G11P").innerHTML = "1 point words: " + G11PResults;
+	document.getElementById("G12P").innerHTML = "2 point words: " + G12PResults
+	document.getElementById("G13P").innerHTML = "3 point words: " + G13PResults;
+	document.getElementById("G21P").innerHTML = "1 point words: " + G21PResults;
+	document.getElementById("G22P").innerHTML = "2 point words: " + G22PResults
+	document.getElementById("G23P").innerHTML = "3 point words: " + G23PResults;
+	document.getElementById("G31P").innerHTML = "1 point words: " + G31PResults;
+	document.getElementById("G32P").innerHTML = "2 point words: " + G32PResults
+	document.getElementById("G33P").innerHTML = "3 point words: " + G33PResults;
+	document.getElementById("G33PO").innerHTML = "Optional words: " + G33POResults;
+}
+</script>
+</head>
+<h1 id="NameChecked">Enter a name</h1>
+<input type="text" id="box" size="60" autofocus/>
+<br>
+<br>
+<input type="button" value="Check" onclick="CheckName()"/>
+<input type="button" value="Clear" onclick="document.getElementById('box').value = ''"/>
+<p>Group 1</p>
+<p id="G11P">1 point words:</p>
+<p id="G12P">2 point words:</p>
+<p id="G13P">3 point words:</p>
+<p>Group 2</p>
+<p id="G21P">1 point words:</p>
+<p id="G22P">2 point words:</p>
+<p id="G23P">3 point words:</p>
+<p>Group 3</p>
+<p id="G31P">1 point words:</p>
+<p id="G32P">2 point words:</p>
+<p id="G33P">3 point words:</p>
+<p id="G33PO">Optional words:</p>
+</body>
+</html>
