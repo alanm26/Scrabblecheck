@@ -121,6 +121,7 @@ function CheckName() {
 		var includesGreataxe = inputnamelc.includes("greataxe");
 		var includesJavelin = inputnamelc.includes("javelin");
 		var includesRevolver = inputnamelc.includes("revolver");
+		var includesTomahawk = inputnamelc.includes("tomahawk");
 		for (var i = 0; i < inputname.length; i++){
 			if ((inputnamelc.charAt(i)) == "a") {
 				containsA++;
@@ -364,6 +365,9 @@ function CheckName() {
 		}
 		if (containsE >=1 && containsH >=1 && containsI >=1 && containsK >=1  && containsN >=1 && containsR >=1 && containsS >=1 && containsU >=1 && includesShuriken == false){
 			G33PResults += "shuriken ";
+		}
+		if (containsA >=2 && containsH >=1 && containsK >=1 && containsM >=1  && containsO >=1 && containsT >=1 && containsW >=1 && includesTomahawk == false){
+			G33PResults += "tomahawk ";
 		}	
 		if (containsA >=2 && containsB >=1 && containsK >=1 && containsO >=2  && containsZ >=1 && includesBazooka == false){
 			G33POResults += "bazooka ";
